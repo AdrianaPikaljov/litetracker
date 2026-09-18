@@ -54,6 +54,12 @@ h1 {
     letter-spacing: -1.5px;
 }
 
+h2 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.1;
+    margin-bottom: 15px;
+    letter-spacing: -1.5px;
+}
 header p {
     max-width: 700px;
     margin: 0 auto;
