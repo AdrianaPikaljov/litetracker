@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sõnavara kontroll</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow-row">
+      <span class="node-dot"></span>
+      LiteTracker · Random sõnad
+    </div>
+
+    <h1>Sõnavara kontroll</h1>
+
+    <p>
+      Hajusrakenduste terminid eesti ja vene keeles.
+      Vali sõna, kirjuta vaste ning kontrolli oma vastust.
+    </p>
+  </header>
+
+  <div class="status-bar">
+    <div class="status-item">
+      <span>Õigeid</span>
+      <b id="scoreCorrect">0</b>
+    </div>
+
+    <div class="status-item">
+      <span>Valesid</span>
+      <b id="scoreWrong">0</b>
+    </div>
+
+    <div class="status-item">
+      <span>Sõnu kokku</span>
+      <b id="dictSize">0</b>
+    </div>
+
+    <button class="btn-reset" id="resetScore">
+      Lähtesta skoor
+    </button>
+  </div>
+
+  <div class="board">
+
+    <div class="node">
+      <div class="node-head">
+        <div>
+          <span class="node-label">SÕLM A</span>
+          <h2>Eesti → Vene</h2>
+        </div>
+
+        <span class="direction">EE → RU</span>
+      </div>
+
+      <div class="word-box">
+        <span>Leia venekeelne vaste</span>
+        <div class="word-display" id="wordEE">…</div>
+      </div>
+
+      <div class="answer-row">
+        <input
+                type="text"
+                id="inputRU"
+                placeholder="Kirjuta vene keeles..."
+                autocomplete="off"
+        >
+
+        <button class="btn-check" id="checkEE">
+          Kontrolli
+        </button>
+      </div>
+
+      <div class="feedback" id="feedbackEE"></div>
+
+      <button class="btn-refresh" id="refreshEE">
+        ↻ Uus sõna
+      </button>
+    </div>
+
+
+    <div class="node">
+      <div class="node-head">
+        <div>
+          <span class="node-label">SÕLM B</span>
+          <h2>Vene → Eesti</h2>
+        </div>
+
+        <span class="direction">RU → EE</span>
+      </div>
+
+      <div class="word-box">
+        <span>Leia eestikeelne vaste</span>
+        <div class="word-display" id="wordRU">…</div>
+      </div>
+
+      <div class="answer-row">
+        <input
+                type="text"
+                id="inputEE"
+                placeholder="Kirjuta eesti keeles..."
+                autocomplete="off"
+        >
+
+        <button class="btn-check" id="checkRU">
+          Проверить
+        </button>
+      </div>
+
+      <div class="feedback" id="feedbackRU"></div>
+
+      <button class="btn-refresh" id="refreshRU">
+        ↻ Новое слово
+      </button>
+    </div>
+
+  </div>
+
+  <footer>
+    LiteTracker · Hajusrakenduste terminoloogia
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
